@@ -2461,6 +2461,7 @@
 				<lefttexture>-</lefttexture>
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
+				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			<control type="group">
 				<visible>Player.HasDuration + Skin.HasSetting(FourthMusicVizLayoutProgress)</visible>
