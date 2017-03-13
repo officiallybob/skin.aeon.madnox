@@ -2257,11 +2257,11 @@ msgid "Move now Playing Below HomeBar"
 msgstr ""
 
 msgctxt "#31561"
-msgid "Center CD Below HomeBar"
+msgid "Center CD"
 msgstr ""
 
 msgctxt "#31562"
-msgid "Show Logo Below HomeBar"
+msgid "Show Logo"
 msgstr ""
 
 msgctxt "#31600"

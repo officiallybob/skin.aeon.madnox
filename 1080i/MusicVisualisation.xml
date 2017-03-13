@@ -66,12 +66,12 @@
 					<texture>common/bgcolor.png</texture>
 				</control>
 				<control type="multiimage">
-					<timeperimage>10000</timeperimage> <!-- option for time? -->
+					<timeperimage>15000</timeperimage> <!-- option for time? -->
 					<aspectratio>keep</aspectratio>
 					<include>MusicVizBG</include>
 					<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 					<visible>String.IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
-					<fadetime>2000</fadetime>
+					<fadetime>3000</fadetime>
 					<randomize>true</randomize>
 				</control>
 			</control>
@@ -2340,8 +2340,8 @@
 				</control>
 			</control>
 		</control>
-		<!-- Third Layout End -->
-		<!--Fourth Layout -->
+<!-- Third Layout End -->
+<!--Fourth Layout -->
 		<!-- Background-->
 		<control type="image">
 				<visible>Skin.HasSetting(FourthMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayoutDown)</visible>
@@ -2359,6 +2359,42 @@
 				<texture>home/nowplaying_shadow.png</texture>
 				<include>Animation_VisibleChange400</include>
 			</control>
+		<!-- cdArt-->
+		<control type="image">
+			<visible>Skin.HasSetting(FourthMusicVizLayoutcdArt)</visible>
+			<animation effect="slide" start="0,-200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
+				<effect type="slide" end="0,180" time="220" tween="cubic" easing="in" />
+				<effect type="fade" start="100" end="0" time="200" />
+				<condition type="!Player.Playing" />
+			</animation>
+			<animation type="Conditional" condition="true">
+				<effect type="fade" end="15" />
+				<effect type="rotatex" end="60" center="960,540" time="0" />
+			</animation>
+			<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+			<aspectratio>keep</aspectratio>
+			<width>500</width>
+			<height>500</height>
+			<top>1400</top>
+			<left>710</left>
+			<fadetime>300</fadetime>
+			<texture background="true" fallback="common/cdart/vinyl.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.DiscArt)]</texture>
+			<aspectratio aligny="bottom">keep</aspectratio>
+		</control>
+		<!-- Cover-->
+		<control type="image">
+			<visible>Skin.HasSetting(FourthMusicVizLayoutCover)</visible>
+			<animation type="Conditional" condition="true">
+				<effect type="fade" end="15" />
+				<effect type="rotatex" end="65" center="960,540" time="0" />
+			</animation>
+			<top>1350</top>
+			<left>710</left>
+			<height>500</height>
+			<width>500</width>
+			<texture fallback="DefaultAlbumCover.png">$INFO[MusicPlayer.Cover]</texture>
+			<aspectratio>keep</aspectratio>
+		</control>
 		<!-- Logo Artist-->
 		<control type="group">
 			<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>

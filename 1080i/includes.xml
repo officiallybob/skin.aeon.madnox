@@ -12,6 +12,7 @@
 	<include file="View_499_Wall_Large.xml" />
 	<include file="View_700_RightList.xml" />
 	<include file="View_706_MusicPanel.xml" />
+	<include file="View_707_MusicBanner.xml" />
 	<include file="View_507_FanartList.xml" />
 	<include file="View_505_BannerInfo.xml" />
 	<include file="View_800_KodiFlix.xml" />
@@ -53,6 +54,7 @@
 	<include file="Includes_VideoExtras.xml"/>
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="IncludesVideoLyrics.xml" />
+	<include file="Includes_NowPayingBottom.xml" />
 	<constant name="AutoScrollTime">2000</constant>
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>

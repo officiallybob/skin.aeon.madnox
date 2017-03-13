@@ -50,9 +50,9 @@
 			<visible>Skin.HasSetting(bottomindicator)</visible>
 		</control>
 
-
+<!-- NowPlayingBottom -->
 		<control type="group">
-			<include condition="Skin.HasSetting(NowPlayingBelowBar)">NowPlayingBottom</include>
+			<include condition="Skin.HasSetting(NowPlayingBottom)">BottomNowPlaying</include>
 		</control>
 
 
