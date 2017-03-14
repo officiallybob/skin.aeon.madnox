@@ -409,22 +409,6 @@
 					<selected>Skin.HasSetting(FourthMusicVizLayoutProgress)</selected>
 					<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>
 				</control>
-				<control type="radiobutton" id="418204">
-					<label>Show cdArt</label>
-					<include>Objects_CommonSettingsButton</include>
-					<onclick>Skin.ToggleSetting(FourthMusicVizLayoutcdArt)</onclick>
-					<onclick>Skin.Reset(FourthMusicVizLayoutCover)</onclick>
-					<selected>Skin.HasSetting(FourthMusicVizLayoutcdArt)</selected>
-					<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>
-				</control>
-				<control type="radiobutton" id="418205">
-					<label>Show Cover</label>
-					<include>Objects_CommonSettingsButton</include>
-					<onclick>Skin.ToggleSetting(FourthMusicVizLayoutCover)</onclick>
-					<onclick>Skin.Reset(FourthMusicVizLayoutcdArt)</onclick>
-					<selected>Skin.HasSetting(FourthMusicVizLayoutCover)</selected>
-					<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>
-				</control>
 				
 				<control type="label" id="430">
 					<width>600</width>
