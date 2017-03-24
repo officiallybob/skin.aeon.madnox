@@ -2264,6 +2264,10 @@ msgctxt "#31562"
 msgid "Show Logo"
 msgstr ""
 
+msgctxt "#31563"
+msgid "List Xtra"
+msgstr ""
+
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr ""
@@ -3537,6 +3541,10 @@ msgstr ""
 
 msgctxt "#31996"
 msgid "Resume Flag"
+msgstr ""
+
+msgctxt "#31997"
+msgid "Polaroid"
 msgstr ""
 
 msgctxt "#31999"
