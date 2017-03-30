@@ -266,7 +266,7 @@
 					<top>0</top>
 					<width>250</width>
 					<fadetime>400</fadetime>
-					<animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8318),empty.png)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="0" condition="String.Contains(Control.GetLabel(8318),empty.png)">Conditional</animation>
 					<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.Clearlogo)]</texture>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
 					<visible>Skin.HasSetting(NowPlayingBottomLogo)</visible>
@@ -279,7 +279,7 @@
 					<width>500</width>
 					<height>4</height>
 					<texture>views/list_divider.png</texture>
-					<visible>Substring(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
+					<visible>String.Contains(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
 				</control>
 				<control type="image">
 					<animation effect="slide" start="-1250" end="-150" time="700" tween="cubic" delay="1100">WindowOpen</animation>
@@ -288,7 +288,7 @@
 					<width>500</width>
 					<height>4</height>
 					<texture>views/list_divider.png</texture>
-					<visible>Substring(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
+					<visible>String.Contains(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
 				</control>
 				<!--logo divider-->
 				<control type="image">
@@ -298,10 +298,10 @@
 					<width>350</width>
 					<height>4</height>
 					<texture>views/list_divider.png</texture>
-					<visible>Skin.HasSetting(NowPlayingBottomLogo) + !Substring(Control.GetLabel(8318),empty.png)</visible>
+					<visible>Skin.HasSetting(NowPlayingBottomLogo) + !String.Contains(Control.GetLabel(8318),empty.png)</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" time="250" start="-270,10" end="0,0" tween="back" easing="out" condition="Substring(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)">Conditional</animation>
+					<animation effect="slide" time="250" start="-270,10" end="0,0" tween="back" easing="out" condition="String.Contains(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)">Conditional</animation>
 					<left>0</left>
 					<top>0</top>
 					<width>790</width>
@@ -312,10 +312,10 @@
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<shadowcolor>black</shadowcolor>
-					<visible>Substring(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
+					<visible>String.Contains(Control.GetLabel(8318),empty.png) | !Skin.HasSetting(NowPlayingBottomLogo)</visible>
 				</control>
 				<control type="label">
-					<animation effect="slide" time="250" start="-265,15" end="0,0" tween="back" easing="out" condition="Skin.HasSetting(NowPlayingBottomLogo) + !Substring(Control.GetLabel(8318),empty.png)">Conditional</animation>
+					<animation effect="slide" time="250" start="-265,15" end="0,0" tween="back" easing="out" condition="Skin.HasSetting(NowPlayingBottomLogo) + !String.Contains(Control.GetLabel(8318),empty.png)">Conditional</animation>
 					<left>270</left>
 					<top>20</top>
 					<width>490</width>
@@ -328,7 +328,7 @@
 					<label>[COLOR=white]$INFO[MusicPlayer.Title, ','][/COLOR]</label>
 				</control>
 				<control type="label">
-					<animation effect="slide" time="250" start="-270,10" end="0,0" tween="back" easing="out" condition="Skin.HasSetting(NowPlayingBottomLogo) + !Substring(Control.GetLabel(8318),empty.png)">Conditional</animation>
+					<animation effect="slide" time="250" start="-270,10" end="0,0" tween="back" easing="out" condition="Skin.HasSetting(NowPlayingBottomLogo) + !String.Contains(Control.GetLabel(8318),empty.png)">Conditional</animation>
 					<left>290</left>
 					<top>65</top>
 					<width>490</width>
