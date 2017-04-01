@@ -777,7 +777,7 @@
 								<label>$INFO[ListItem.Studio]</label>
 								<font>Bluback2</font>
 								<textcolor>white</textcolor>
-								<visible>[String.Contains(Control.GetLabel(84756),xy,Left)]</visible>
+								<visible>[String.StartsWith(Control.GetLabel(84756),xy)]</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -828,7 +828,7 @@
 								<font>Bluback2</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>black</shadowcolor>
-								<visible>[String.Contains(Control.GetLabel(84756),xy,Left)]</visible>
+								<visible>[String.StartsWith(Control.GetLabel(84756),xy)]</visible>
 							</control>
 							<control type="image">
 								<left>30</left>

@@ -2835,7 +2835,7 @@
 				<width>170</width>
 				<left>75</left>
 				<top>-480</top>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Skin.HasSetting(widgetpola) + String.Contains(Control.GetLabel(7782),xy,Left)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Skin.HasSetting(widgetpola) + String.Contains(Control.GetLabel(7782),xy,Left)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Skin.HasSetting(widgetpola) + String.StartsWith(Control.GetLabel(7782),xy)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Skin.HasSetting(widgetpola) + String.StartsWith(Control.GetLabel(7782),xy)]</visible>
 				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 				<colordiffuse>D1FFFFFF</colordiffuse>
 				<aspectratio>keep</aspectratio>
@@ -2844,7 +2844,7 @@
 				<width>295</width>
 				<left>16</left>
 				<top>-490</top>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.StartsWith(Control.GetLabel(7782),xy) + String.StartsWith(Control.GetLabel(7783),qa) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.StartsWith(Control.GetLabel(7782),xy) + String.StartsWith(Control.GetLabel(7783),qa) + Skin.HasSetting(widgetpola)]</visible>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture background="true">thumbs/headline.png</texture>
 				<aspectratio>keep</aspectratio>
@@ -2857,7 +2857,7 @@
 				<aligny>top</aligny>
 				<align>center</align>
 				<font>Flyer_25</font>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.StartsWith(Control.GetLabel(7782),xy) + String.StartsWith(Control.GetLabel(7783),qa) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.StartsWith(Control.GetLabel(7782),xy) + String.StartsWith(Control.GetLabel(7783),qa) + Skin.HasSetting(widgetpola)]</visible>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>

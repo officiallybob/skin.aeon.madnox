@@ -1559,7 +1559,7 @@
 					<height>300</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture>$INFO[Container(11).ListItem.PlotOutline]</texture>
-					<visible>String.Contains(Container(11).ListItem.PlotOutline,"http://",Left) | String.Contains(Container(11).ListItem.PlotOutline,"https://",Left)</visible>
+					<visible>String.StartsWith(Container(11).ListItem.PlotOutline,"http://") | String.StartsWith(Container(11).ListItem.PlotOutline,"https://")</visible>
 				</control>
 			</control>
 
