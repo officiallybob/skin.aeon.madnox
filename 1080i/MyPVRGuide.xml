@@ -270,7 +270,7 @@
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 					<control type="image">
 						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
@@ -622,7 +622,7 @@
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 				</control>
 			</control>
@@ -892,7 +892,7 @@
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 				</control>
 			</control>

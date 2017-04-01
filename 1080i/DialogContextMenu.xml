@@ -105,10 +105,10 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Container.Content(albums) | Container.Content(songs) | String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)</visible>
+				<visible>Container.Content(albums) | Container.Content(songs) | String.EndWith(ListItem.FolderPath,.xsp) | String.EndWith(ListItem.FolderPath,.m3u)</visible>
 				<onclick condition="Container.Content(albums)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,albumid=$INFO[ListItem.DBID]))</onclick>
 				<onclick condition="Container.Content(songs)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,songid=$INFO[ListItem.DBID]))</onclick>
-				<onclick condition="String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
+				<onclick condition="String.EndWith(ListItem.FolderPath,.xsp) | String.EndWith(ListItem.FolderPath,.m3u)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
 				<onclick>Skin.SetBool(Use_Startup_Playlist)</onclick>
 			</control>
 			<control type="button" id="2017">
@@ -139,9 +139,9 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Window.IsActive(addonbrowser) + [String.Contains(ListItem.AddonID,script.,left) | String.Contains(ListItem.AddonID,plugin.,left)]</visible>
-				<onclick condition="String.Contains(ListItem.AddonID,script.,left)">Runscript($INFO[ListItem.AddonID)])</onclick>
-				<onclick condition="String.Contains(ListItem.AddonID,plugin.,left)">RunAddon($INFO[ListItem.AddonID)])</onclick>
+				<visible>Window.IsActive(addonbrowser) + [String.StartsWith(ListItem.AddonID,script.) | String.StartsWith(ListItem.AddonID,plugin.)]</visible>
+				<onclick condition="String.StartsWith(ListItem.AddonID,script.)">Runscript($INFO[ListItem.AddonID)])</onclick>
+				<onclick condition="String.StartsWith(ListItem.AddonID,plugin.)">RunAddon($INFO[ListItem.AddonID)])</onclick>
 			</control>
 			<control type="button" id="2020">
 				<width>462</width>
