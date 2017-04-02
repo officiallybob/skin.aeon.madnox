@@ -334,7 +334,7 @@
 			<itemlayout height="100" width="100" />
 			<focusedlayout height="100" width="100" />
 			<content sortby="$VAR[SubmenuPlaylistSortby]" sortorder="$VAR[SubmenuPlaylistSort]">$VAR[SubmenuPlaylistBackground]</content>
-			<autoscroll time="7000" delay="7000" repeat="7000">!String.EndWith(Container(9010).ListItem.Property(background),.Live)</autoscroll>
+			<autoscroll time="7000" delay="7000" repeat="7000">!String.EndsWith(Container(9010).ListItem.Property(background),.Live)</autoscroll>
 		</control>
 
 		<!-- Hidden list for bottom menu in-progress movies -->
