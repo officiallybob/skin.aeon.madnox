@@ -195,7 +195,7 @@
 		<value condition="[String.Contains(Player.Filenameandpath,bluray) | String.Contains(Player.Filenameandpath,blu-ray) | String.Contains(Player.Filenameandpath,bdrip) | String.Contains(Player.Filenameandpath,brrip)]">bluray</value>
 		<value condition="String.Contains(Player.Filenameandpath,dvb)">dvb</value>
 		<value condition="String.Contains(Player.Filenameandpath,web-dl)">web-dl</value>
-		<value condition="String.Contains(Player.Filenameandpath,dvd) | String.EndWith(Player.Filenameandpath,.iso) | String.EndWith(Player.Filenameandpath,.ifo)">dvd</value>
+		<value condition="String.Contains(Player.Filenameandpath,dvd) | String.EndsWith(Player.Filenameandpath,.iso) | String.EndsWith(Player.Filenameandpath,.ifo)">dvd</value>
 		<value>$INFO[VideoPlayer.VideoCodec]</value>
 	</variable>
 	<variable name="VideoPlayerSubTitleVar">
@@ -1339,13 +1339,13 @@
 		<value condition="Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(background),Weather.Fanart) + Skin.HasSetting(WeatherFanartDir.multi)">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 		<value condition="Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(background),Weather.Fanart) + !String.IsEmpty(Skin.String(WeatherFanartDir.path))">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
 		<value condition="Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(background),Weather.Fanart)">http://aeon-nox-background-packs.googlecode.com/svn/trunk/weather-fanart/default/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
-		<value condition="Control.HasFocus(9010) + String.EndWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))">noop</value>
-		<value condition="Control.HasFocus(9010) + String.EndWith(Container(9010).ListItem.Property(background),FanartList) + !String.EndWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))">$INFO[Container(8011).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))">noop</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),FanartList) + !String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))">$INFO[Container(8011).ListItem.Art(fanart)]</value>
 		<value condition="Control.HasFocus(9010) + !String.Contains(Container(9010).ListItem.Property(background),FanartList) + !String.IsEmpty(Container(9010).ListItem.Property(background))">$INFO[Container(9010).ListItem.Property(background)]</value>		<value condition="String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart) + Skin.HasSetting(WeatherFanartDir.multi)">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart) + !String.IsEmpty(Skin.String(WeatherFanartDir.path))">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(Weather).Property(Current.FanartCode),,.jpg]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(background),Weather.Fanart)">http://aeon-nox-background-packs.googlecode.com/svn/trunk/weather-fanart/default/$INFO[Window(Weather).Property(Current.FanartCode)]</value>
-		<value condition="String.EndWith(Container(9000).ListItem.Property(background),FanartList) + Integer.IsGreater(Container(8010).NumItems,0) + !String.IsEmpty(Container(8010).ListItem.Art(fanart)) + ![Skin.HasSetting(widgetautoscroll-list) + String.Contains(Container(9000).ListItem.Property(widgetStyle),List) + String.StartsWith(Container(9000).ListItem.Property(background),Widget)]">$INFO[Container(8010).ListItem.Art(fanart)]</value>
-		<value condition="String.EndWith(Container(9000).ListItem.Property(background),.Live)">noop</value>
+		<value condition="String.EndsWith(Container(9000).ListItem.Property(background),FanartList) + Integer.IsGreater(Container(8010).NumItems,0) + !String.IsEmpty(Container(8010).ListItem.Art(fanart)) + ![Skin.HasSetting(widgetautoscroll-list) + String.Contains(Container(9000).ListItem.Property(widgetStyle),List) + String.StartsWith(Container(9000).ListItem.Property(background),Widget)]">$INFO[Container(8010).ListItem.Art(fanart)]</value>
+		<value condition="String.EndsWith(Container(9000).ListItem.Property(background),.Live)">noop</value>
 		<value condition="!String.Contains(Container(9000).ListItem.Property(background),FanartList) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 		<value>special://skin/backgrounds/videos/</value>
 	</variable>
@@ -3845,11 +3845,11 @@
 		<value>$INFO[Container(9010).ListItem.Property(backgroundPlaylist)]</value>
 	</variable>
 	<variable name="SubmenuPlaylistSort">
-		<value condition="!String.EndWith(Container(9010).ListItem.Property(background),.Live)"></value>
+		<value condition="!String.EndsWith(Container(9010).ListItem.Property(background),.Live)"></value>
 		<value>$INFO[Container(9010).ListItem.Property(backgroundSort)]</value>
 	</variable>
 	<variable name="SubmenuPlaylistSortby">
-		<value condition="!String.EndWith(Container(9010).ListItem.Property(background),.Live)">random</value>
+		<value condition="!String.EndsWith(Container(9010).ListItem.Property(background),.Live)">random</value>
 		<value>$INFO[Container(9010).ListItem.Property(backgroundSortby)]</value>
 	</variable>
 	<variable name="Shelf3DRLabel1Var">
