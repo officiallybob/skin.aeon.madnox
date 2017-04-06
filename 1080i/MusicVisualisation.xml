@@ -2362,7 +2362,7 @@
 		<!-- cdArt-->
 		<control type="image">
 			<visible>Skin.HasSetting(FourthMusicVizLayoutcdArt)</visible>
-			<animation effect="slide" start="0,-200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
+			<animation effect="slide" start="0,200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
 				<effect type="slide" end="0,180" time="220" tween="cubic" easing="in" />
 				<effect type="fade" start="100" end="0" time="200" />
 				<condition type="!Player.Playing" />
@@ -2384,7 +2384,7 @@
 		<!-- Cover-->
 		<control type="image">
 			<visible>Skin.HasSetting(FourthMusicVizLayoutCover)</visible>
-			<animation effect="slide" start="0,-200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
+			<animation effect="slide" start="0,200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
 				<effect type="slide" end="0,180" time="220" tween="cubic" easing="in" />
 				<effect type="fade" start="100" end="0" time="200" />
 				<condition type="!Player.Playing" />
