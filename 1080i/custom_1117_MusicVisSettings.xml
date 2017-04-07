@@ -395,6 +395,13 @@
 					<selected>Skin.HasSetting(FourthMusicVizLayoutShowinfo)</selected>
 					<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>
 				</control>
+				<control type="radiobutton" id="418206"><!-- Last-->
+					<label>  • Short Info</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(FourthMusicVizLayoutShowInfoShort)</onclick>
+					<selected>Skin.HasSetting(FourthMusicVizLayoutShowinfoShort)</selected>
+					<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowinfo)</visible>
+				</control>
 				<control type="radiobutton" id="418202">
 					<label>Show Rating</label>
 					<include>Objects_CommonSettingsButton</include>
