@@ -817,6 +817,7 @@
 						<info>Player.Progress</info>
 						<animation effect="fade" end="80" condition="true">Conditional</animation>
 						<visible>Player.HasDuration</visible>
+						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					</control>
 				</control>
 				<control type="label">
@@ -848,7 +849,7 @@
 				</control>
 			</control>
 		</control>
-		<!-- MooViz layout -->
+<!-- MooViz layout -->
 		<control type="image">
 			<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
@@ -1107,8 +1108,8 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
-				<left>1828</left>
-				<top>-170</top>
+				<left>600</left>
+				<top>-165</top>
 				<width>1180</width>
 				<height>38</height>
 				<align>right</align>
@@ -1122,8 +1123,8 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
-				<left>1828</left>
-				<top>-170</top>
+				<left>600</left>
+				<top>-165</top>
 				<width>1180</width>
 				<height>38</height>
 				<align>right</align>
@@ -1148,7 +1149,7 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
-				<left>1828</left>
+				<left>500</left>
 				<top>-74</top>
 				<width>1280</width>
 				<height>45</height>
@@ -1164,7 +1165,7 @@
 			<control type="label">
 				<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
-				<left>1828</left>
+				<left>500</left>
 				<top>-8</top>
 				<width>1280</width>
 				<height>36</height>
@@ -1181,7 +1182,7 @@
 			<visible>!Skin.HasSetting(AltMusicVizLayoutPlaylistNext)</visible>
 			<control type="label">
 				<visible>!Skin.HasSetting(AltMusicVizLayoutNext) + !MusicPartyMode.Enabled</visible>
-				<left>1658</left>
+				<left>858</left>
 				<top>50</top>
 				<width>800</width>
 				<height>36</height>
@@ -1195,7 +1196,7 @@
 			</control>
 			<control type="label">
 				<visible>!Skin.HasSetting(AltMusicVizLayoutNext) + MusicPartyMode.Enabled</visible>
-				<left>1658</left>
+				<left>858</left>
 				<top>50</top>
 				<width>800</width>
 				<height>36</height>
@@ -1209,7 +1210,7 @@
 			</control>
 			<control type="label">
 				<visible>!Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutArtist)</visible>
-				<left>1658</left>
+				<left>858</left>
 				<top>80</top>
 				<width>800</width>
 				<height>36</height>
@@ -1223,7 +1224,7 @@
 			</control>
 			<control type="label">
 				<visible>!Skin.HasSetting(AltMusicVizLayoutNext) + !Skin.HasSetting(AltMusicVizLayoutArtist)</visible>
-				<left>1658</left>
+				<left>858</left>
 				<top>80</top>
 				<width>800</width>
 				<height>36</height>
@@ -1237,7 +1238,7 @@
 			</control>
 			<control type="label">
 				<visible>!Skin.HasSetting(AltMusicVizLayoutNext)</visible>
-				<left>1658</left>
+				<left>858</left>
 				<top>110</top>
 				<width>800</width>
 				<height>36</height>
@@ -1748,6 +1749,7 @@
 				<righttexture>-</righttexture>
 				<info>Player.Progress</info>
 				<animation effect="fade" end="80" condition="true">Conditional</animation>
+				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 				<visible>Player.HasDuration + !Skin.HasSetting(AltMusicVizLayoutProgress)</visible>
 			</control>
 			<!-- Codec/genre -->
@@ -1776,13 +1778,13 @@
 				</control>
 				<control type="image">
 					<visible>Skin.HasSetting(AltMusicVizLayoutRating)</visible>
-					<left>845</left>
+					<left>830</left>
 					<top>137</top>
-					<width>150</width>
+					<width>200</width>
 					<height>89</height>
 					<aspectratio>keep</aspectratio>
-					<colordiffuse>white</colordiffuse>
-					<texture fallback="rating0.png">$INFO[Player.StarRating]</texture>
+					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture fallback="flags/music/ratingnew/0.png">flags/music/ratingnew/$INFO[MusicPlayer.UserRating].png</texture>
 				</control>
 				<control type="label">
 					<visible>!Skin.HasSetting(AltMusicVizLayoutRating)</visible>
@@ -1830,8 +1832,8 @@
 				</control>
 			</control>
 		</control>
-		<!-- MooViz layout end -->
-		<!-- Third Layout Start -->
+<!-- MooViz layout end -->
+<!-- Third Layout Start -->
 		<control type="group"> <!--OnScreen Info-->
 			<left>-20</left>
 			<top>540</top>
@@ -1964,13 +1966,13 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>664</left>
-					<top>245</top>
-					<width>135</width>
-					<height>88</height>
-					<colordiffuse>selected</colordiffuse>
-					<aspectratio>stretch</aspectratio>
-					<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.Rating].png</texture>
+					<left>600</left>
+					<top>240</top>
+					<width>200</width>
+					<height>89</height>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture fallback="flags/music/ratingnew/0.png">flags/music/ratingnew/$INFO[ListItem.Rating].png</texture>
 				</control>
 				<control type="progress">
 					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizRecordPlayer)">Conditional</animation>
@@ -2361,8 +2363,8 @@
 			</control>
 		<!-- cdArt-->
 		<control type="image">
-			<visible>Skin.HasSetting(FourthMusicVizLayoutcdArt)</visible>
-			<animation effect="slide" start="0,-200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutcdArt)</visible>
+			<animation effect="slide" start="0,200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
 				<effect type="slide" end="0,180" time="220" tween="cubic" easing="in" />
 				<effect type="fade" start="100" end="0" time="200" />
 				<condition type="!Player.Playing" />
@@ -2383,8 +2385,8 @@
 		</control>
 		<!-- Cover-->
 		<control type="image">
-			<visible>Skin.HasSetting(FourthMusicVizLayoutCover)</visible>
-			<animation effect="slide" start="0,-200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutCover)</visible>
+			<animation effect="slide" start="0,200" end="0" time="560" tween="cubic" delay="720">WindowOpen</animation><animation type="WindowClose">
 				<effect type="slide" end="0,180" time="220" tween="cubic" easing="in" />
 				<effect type="fade" start="100" end="0" time="200" />
 				<condition type="!Player.Playing" />
@@ -2531,7 +2533,7 @@
 		</control>
 		<!-- Info -->
 		<control type="label">
-			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowInfo)</visible>
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowInfo) + !Skin.HasSetting(FourthMusicVizLayoutShowInfoShort)</visible>
 			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
 			<left>460</left>
 			<top>540</top>
@@ -2542,8 +2544,35 @@
 			<shadowcolor>black</shadowcolor>
 			<label>[COLOR=white]$INFO[MusicPlayer.Codec][/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.Bitrate][COLOR=$VAR[TitleColorVar]] kbps[/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.Samplerate][COLOR=$VAR[TitleColorVar]] kHz[/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.BitsPerSample][COLOR=$VAR[TitleColorVar]] Bits[/COLOR]  [COLOR=gray]•[/COLOR]  [COLOR=white]$INFO[MusicPlayer.Genre][/COLOR]</label>
 		</control>
-		<!-- Rating-->
+		<!--Short Info-->
+		<control type="label">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowInfo) + Skin.HasSetting(FourthMusicVizLayoutShowInfoShort)</visible>
+			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
+			<left>460</left>
+			<top>540</top>
+			<width>1000</width>
+			<height>40</height>
+			<align>center</align>
+			<font>font.ml</font>
+			<shadowcolor>black</shadowcolor>
+			<label>[COLOR=white]$INFO[MusicPlayer.Codec][/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.Bitrate][COLOR=$VAR[TitleColorVar]] kbps[/COLOR]  [COLOR=gray]•[/COLOR]  [COLOR=white]$INFO[MusicPlayer.Genre][/COLOR]</label>
+		</control>
+		<!-- UserRating-->
 		<control type="image">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowRating)</visible>
+			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-35" time="100" tween="cubic" condition="!Skin.HasSetting(FourthMusicVizLayoutShowInfo)">Conditional</animation>
+			<left>860</left>
+			<top>550</top>
+			<width>200</width>
+			<height>89</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture fallback="flags/music/ratingnew/0.png">flags/music/ratingnew/$INFO[MusicPlayer.UserRating].png</texture>
+			<!--texture fallback="rating0.png">$INFO[Player.Rating]</texture-->
+		</control>
+		<!-- UserRating-->
+		<!--control type="image">
 			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowRating)</visible>
 			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
 			<left>860</left>
@@ -2552,10 +2581,10 @@
 			<height>89</height>
 			<aspectratio>keep</aspectratio>
 			<colordiffuse>white</colordiffuse>
-			<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[Player.Rating].png</texture>
-			<!--texture fallback="rating0.png">$INFO[Player.Rating]</texture-->
-		</control>
-	<!--Fourth Layout End -->
+			<texture>userratings/$INFO[MusicPlayer.UserRating].png</texture>
+		</control-->
+<!--Fourth Layout End -->
+<!--Stuff -->
 		<control type="group">
 			<left>1480</left>
 			<top>510</top>
