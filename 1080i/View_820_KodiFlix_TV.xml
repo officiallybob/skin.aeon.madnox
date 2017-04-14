@@ -22,6 +22,7 @@
 				<description>KodiFlix Fanart</description>
 				<include>FanartFade</include>
 				<include>BackgroundAnimation</include>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<visible>!Player.HasVideo + Control.IsVisible(820) + [!Skin.HasSetting(NetFiixTVExtraFanart) | String.IsEmpty(Control.GetLabel(5910))]</visible>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartFullScreenDimensions</include>
@@ -112,6 +113,7 @@
 			<control type="group">
 				<description>KodiFlix Fanart extrafanart</description>
 				<include>Animation_VisibleChange200</include>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<visible>!Player.HasVideo + Control.IsVisible(820) + Skin.HasSetting(NetFiixTVExtraFanart)</visible>
 				<control type="multiimage" id="5910">
 					<include condition="Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartDimensions</include>
@@ -184,7 +186,12 @@
 					<visible>Skin.HasSetting(KodiFlixTVShortList) + !Skin.HasSetting(NetFlixTVHideFilmInfo) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVLowerInfo) + !Skin.HasSetting(KodiFlixTVSmallFanart)</visible>
 				</control>
 			</control>
-
+			<!--TVinfo Background -->
+			<control type="image">
+					<include>KodiFlixTVSmallFanartFullScreenDimensions</include>
+					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">views/kodiflix/tvart/background.jpg</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo)</visible>
+			</control>
 			<control type="image">
 				<left>1751</left>
 				<top>2</top>
@@ -411,6 +418,7 @@
 				</control>
 			</control>
 			<control type="group">
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList) + [Container.Content(movies) | Container.Content(sets)]">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,180" time="350" tween="cubic" easing="out" />
@@ -488,6 +496,7 @@
 				</control>
 			</control>
 			<control type="group">
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,180" time="350" tween="cubic" easing="out" />
@@ -542,6 +551,7 @@
 				<top>314</top>
 				<visible>[[[Container.Content(movies) | Container.Content(sets)]  + Skin.HasSetting(KodiFlixLandscapeView)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)]] + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -562,6 +572,7 @@
 				<top>344</top>
 				<visible>[[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -586,6 +597,7 @@
 				</animation>
 				<visible>[[[Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(KodiFlixLandscapeView)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)]] + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -609,6 +621,7 @@
 				</animation>
 				<visible>[[[Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(KodiFlixLandscapeView)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(KodiFlixTVPosters)]] + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -628,6 +641,7 @@
 				<top>334</top>
 				<visible>[[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(KodiFlixTVPosters)] + !Skin.HasSetting(KodiFlixTVCenterList)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -651,6 +665,7 @@
 				</animation>
 				<visible>[[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(KodiFlixTVPosters)] + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -674,6 +689,7 @@
 				</animation>
 				<visible>[[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(KodiFlixTVPosters)] + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -693,6 +709,7 @@
 				<top>304</top>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixTVCenterList)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -716,6 +733,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -739,6 +757,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -758,6 +777,7 @@
 				<top>304</top>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixTVCenterList)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -781,6 +801,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -804,6 +825,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -827,6 +849,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -850,6 +873,7 @@
 				</animation>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(KodiFlixLandscapeView) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixLowerInfo)</visible>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
+				<visible>!Skin.HasSetting(KodiFlixTVInfo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -862,6 +886,46 @@
 					<pagecontrol>63</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
 					<shadowcolor>77000000</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>304</top>
+				<animation effect="slide" start="0,0" end="620,50" delay="0" time="800" tween="cubic" easing="inout" condition="true">Conditional</animation>
+				<visible>Skin.HasSetting(KodiFlixTVInfo)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="textbox" id="70">
+					<label>$VAR[VideoPlotVar3]</label>
+					<left>15</left>
+					<top>110</top>
+					<width>630</width>
+					<height>510</height>
+					<textcolor>white</textcolor>
+					<font>font14_textbox</font>
+					<pagecontrol>63</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>!Container.Content(episodes) + !ListItem.IsParentFolder</visible>
+				</control>
+			</control>
+			<control type="group">
+				<left>40</left>
+				<top>304</top>
+				<animation effect="slide" start="0,0" end="620,50" delay="0" time="800" tween="cubic" easing="inout" condition="true">Conditional</animation>
+				<visible>Skin.HasSetting(KodiFlixTVInfo)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="textbox" id="70">
+					<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,0] - $VAR[VideoPlotVar3]</label>
+					<left>15</left>
+					<top>110</top>
+					<width>630</width>
+					<height>510</height>
+					<textcolor>white</textcolor>
+					<font>font14_textbox</font>
+					<pagecontrol>63</pagecontrol>
+					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<shadowcolor>77000000</shadowcolor>
+					<visible>Container.Content(episodes) + !ListItem.IsParentFolder</visible>
 				</control>
 			</control>
 			<!--Plot Info-->
@@ -898,7 +962,7 @@
 						<width>118</width>
 						<height>24</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
@@ -993,12 +1057,12 @@
 				<control type="group">
 					<width>115</width>
 					<control type="image">
-						<left>0</left>
+						<left>20</left>
 						<top>-2</top>
 						<width>118</width>
-						<height>24</height>
+						<height>30</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
@@ -1065,8 +1129,8 @@
 				<include condition="!Skin.HasSetting(KodiFlixTVShortList) + !Skin.Hassetting(KodiFlixTVCenterList)">KodiFlixTVNormalListWidth</include>
 				<height>900</height>
 				<onleft>820</onleft>
-				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
-				<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTVSetCasesDelay_5) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixBoxsets) + Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Container.Content(tvshows)">conditional</animation>
+				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + !Skin.Hassetting(KodiFlixTVInfo)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="620,-500" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.Hassetting(KodiFlixTVInfo)">Conditional</animation><animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTVSetCasesDelay_5) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixBoxsets) + Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Container.Content(tvshows)">conditional</animation>
 				<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTVSetCasesDelay_10) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixBoxsets) + Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Container.Content(tvshows)">conditional</animation>
 				<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTVSetCasesDelay_20) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixBoxsets) + Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Container.Content(tvshows)">conditional</animation>
 				<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTVSetCasesDelay_30) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixBoxsets) + Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Container.Content(tvshows)">conditional</animation>
@@ -1086,7 +1150,7 @@
 				<pagecontrol>60</pagecontrol>
 				<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				<!--tvshows-->
-				<itemlayout condition="[[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)] | Container.Content(Episodes)" width="313.5" height="376">
+				<itemlayout condition="[[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)] | Container.Content(Episodes)" width="313.5" height="376">
 					<control type="image">
 						<left>-2</left>
 						<top>98</top>
@@ -1191,7 +1255,7 @@
 						<include>KodiFlixTVDimAnimation</include>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)] | Container.Content(Episodes)" width="313.5" height="376">
+				<focusedlayout condition="[[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)] | Container.Content(Episodes)" width="313.5" height="376">
 					<control type="image">
 						<left>-2</left>
 						<top>95</top>
@@ -1278,7 +1342,7 @@
 					</control>
 				</focusedlayout>
 				<!-- TV Shows - Posters -->
-				<itemlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)" width="208.5" height="456">
+				<itemlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)" width="208.5" height="456">
 					<control type="image">
 						<top>20</top>
 						<width>200</width>
@@ -1329,7 +1393,7 @@
 						<visible>Skin.HasSetting(KodiFlixThumbnailInfo)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) " width="209.5" height="356">
+				<focusedlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)" width="209.5" height="356">
 					<control type="image">
 						<top>20</top>
 						<width>200</width>
@@ -1383,7 +1447,7 @@
 					</control>
 				</focusedlayout>
 				<!-- TV Shows - Boxsets -->
-				<itemlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)]  + !Skin.HasSetting(KodiFlixTVPosters) + Skin.HasSetting(KodiFlixBoxsets)" width="268" height="456">
+				<itemlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)]  + !Skin.HasSetting(KodiFlixTVPosters) + Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)" width="268" height="456">
 					<control type="image">
 						<left>5</left>
 						<top>7</top>
@@ -1478,7 +1542,7 @@
 						<include>KodiFlixTVDimAnimation</include>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + Skin.HasSetting(KodiFlixBoxsets) " width="236" height="356">
+				<focusedlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)" width="236" height="356">
 					<control type="group">
 						<animation type="Conditional" condition="Skin.HasSetting(KodiFlixBoxsetsExtrazoom)" reversible="false">
 							<effect type="zoom" center="auto" start="0" end="140" tween="cubic" easing="out" />
@@ -1594,7 +1658,111 @@
 							<fadetime>100</fadetime>
 							<texture background="true">views/boxsets/lines.png</texture>
 						</control>
-
+					</control>
+				</focusedlayout>
+				<!-- TV Shows - TV Info -->
+				<itemlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVInfo) + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)" width="208.5" height="456">
+					<control type="image">
+						<top>20</top>
+						<width>200</width>
+						<height>303</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture border="30">views/other/panel.png</texture>
+						<include>KodiFlixTVDimAnimation</include>
+						<visible>!Skin.HasSetting(NetFlixTVHideBackgroundPanel)</visible>
+					</control>
+					<control type="image">
+						<top>320</top>
+						<width>200</width>
+						<height>203</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture border="30" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png">views/other/panel2.png</texture>
+						<include>KodiFlixTVDimAnimation</include>
+						<visible>!Skin.HasSetting(NetFlixTVHideBackgroundPanel)</visible>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>22</top>
+						<width>198</width>
+						<height>299</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
+						<bordersize>6</bordersize>
+						<include>KodiFlixTVDimAnimation</include>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>324</top>
+						<width>198</width>
+						<height>299</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
+						<bordersize>6</bordersize>
+						<animation type="Conditional" reversible="false" condition="Skin.HasSetting(KodiFlixTVDimItems)">
+							<effect type="fade" start="100" end="30" time="0" tween="sine" easing="out" />
+						</animation>
+					</control>
+					<control type="group">
+						<left>-7</left>
+						<top>15</top>
+						<include>UnwatchedIcon</include>
+						<include>KodiFlixTVDimAnimation</include>
+						<visible>Skin.HasSetting(KodiFlixThumbnailInfo)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="[Container.Content(TVShows) | Container.Content(Seasons)] + Skin.HasSetting(KodiFlixTVInfo) + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) " width="209.5" height="356">
+					<control type="image">
+						<top>20</top>
+						<width>200</width>
+						<height>303</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture border="30">views/other/panel.png</texture>
+						<visible>!Skin.HasSetting(NetFlixTVHideBackgroundPanel)</visible>
+					</control>
+					<control type="image">
+						<top>320</top>
+						<width>202</width>
+						<height>303</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture border="30" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png">views/other/panel2.png</texture>
+						<visible>!Skin.HasSetting(NetFlixTVHideBackgroundPanel)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>22</top>
+						<width>198</width>
+						<height>299</height>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
+						<bordersize>8</bordersize>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>324</top>
+						<width>198</width>
+						<height>299</height>
+						<aspectratio align="center" aligny="center">stretch</aspectratio>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<bordersize>8</bordersize>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>2</top>
+						<width>198</width>
+						<height>299</height>
+						<aspectratio aligny="center" align="center">stretch</aspectratio>
+						<texture>overlays/unwatched/thumbs/$VAR[WatchedStateOverlay]_Poster.png</texture>
+						<visible>[String.IsEqual(Skin.String(WatchedFlag),unwatched) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)] | [String.IsEqual(Skin.String(WatchedFlag),watched) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)]</visible>
+						<bordersize>8</bordersize>
+					</control>
+					<control type="group">
+						<left>-7</left>
+						<top>15</top>
+						<include>UnwatchedIcon</include>
+						<visible>Skin.HasSetting(KodiFlixThumbnailInfo)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -1761,10 +1929,11 @@
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture border="15">views/addonwall_select.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVInfo)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="620,-500" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVInfo)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="940,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + [Skin.HasSetting(KodiFlixLandscapeView) | Skin.HasSetting(KodiFlixClearArtView)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)] | Container.Content(episodes)</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + [Skin.HasSetting(KodiFlixLandscapeView) | Skin.HasSetting(KodiFlixClearArtView)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)] | Container.Content(episodes)</visible>
 			</control>
 			<control type="image">
 				<left>45</left>
@@ -1777,7 +1946,7 @@
 				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="940,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + [Skin.HasSetting(KodiFlixLandscapeView) | Skin.HasSetting(KodiFlixClearArtView)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets)] | Container.Content(episodes)</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + [Skin.HasSetting(KodiFlixLandscapeView) | Skin.HasSetting(KodiFlixClearArtView)]] | [[Container.Content(TVShows) | Container.Content(Seasons)] + !Skin.HasSetting(KodiFlixTVPosters) + !Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVInfo)] | [Container.Content(episodes) + !Skin.HasSetting(KodiFlixTVInfo)]]</visible>
 			</control>
 			<control type="image">
 				<left>45</left>
@@ -1787,8 +1956,9 @@
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture border="15">views/addonwall_select.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(KodiFlixTVPosters)</visible>
-				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(KodiFlixTVPosters) | Skin.HasSetting(KodiFlixTVInfo)]</visible>
+				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + !Skin.Hassetting(KodiFlixTVInfo)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="620,-500" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.Hassetting(KodiFlixTVInfo)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
 				<animation type="Focus" reversible="false" condition="Container(820).OnNext">
@@ -1800,6 +1970,257 @@
 					<effect type="fade" start="20" end="100" time="750" delay="0" tween="sine" easing="out" />
 				</animation>
 			</control>
+			
+			<control type="group">
+				<visible>!Skin.HasSetting(KodiFlixTVInfoSwitchArt)</visible>
+				<control type="image" id="82090">
+					<animation effect="slide" start="0,0" end="0,-100" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVInfoShowBanner) + Container.Content(episodes)">Conditional</animation>
+					<left>50</left>
+					<top>575</top>
+					<width>790</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVInfoCharacterArtVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>475</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVinfoLandscape]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + String.IsEmpty(Control.GetLabel(82090)) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>1320</left>
+					<top>70</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVinfoBannerVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixTVInfoShowBanner)</visible>
+				</control>
+				<control type="image">
+					<animation effect="slide" start="0,0" end="0,-100" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVInfoShowBanner) + Container.Content(episodes)">Conditional</animation>
+					<left>1320</left>
+					<top>455</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVInfoClearArtVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>Skin.HasSetting(KodiFlixTVInfoSwitchArt)</visible>
+				<control type="image" id="82091">
+					<left>1320</left>
+					<top>575</top>
+					<width>790</width>
+					<height>460</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVInfoCharacterArtVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>1320</left>
+					<top>475</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVinfoLandscape]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + String.IsEmpty(Control.GetLabel(82091)) + !ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>70</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVinfoBannerVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixTVInfoShowBanner)</visible>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>455</top>
+					<width>590</width>
+					<height>510</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+					<texture background="true">$VAR[KodiFlixTVInfoClearArtVar]</texture>
+					<visible>Skin.HasSetting(KodiFlixTVInfo) + !ListItem.IsParentFolder</visible>
+				</control>
+			</control>
+			
+			<control type="group" id="816">
+				<visible>Skin.HasSetting(KodiFlixTVInfo) + !Skin.HasSetting(KodiFlixTVInfoSwitchArt) + Skin.HasSetting(KodiFlixTVInfoShowCast) + !ListItem.IsParentFolder</visible>
+				<control type="wraplist" id="1000">
+					<content>$VAR[KodilixTVInfoCast]</content>
+					<left>35</left>
+					<top>475</top>
+					<width>622</width>
+					<height>220</height>
+					<onleft>1000</onleft>
+					<onright>1000</onright>
+					<onup>8050</onup>
+					<ondown>8050</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>400</scrolltime>
+					<autoscroll delay="8000" time="6000" repeat="10000">true</autoscroll>
+					<itemlayout height="110" width="90">
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<include>Animation_VisibleChange400</include>
+							<colordiffuse>FF909090</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout height="110" width="90">
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>90</width>
+							<height>110</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_VisibleChange400</include>
+							<visible>!Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_VisibleChange400</include>
+							<visible>Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>5</top>
+							<width>526</width>
+							<height>104</height>
+							<texture>black.png</texture>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<top>20</top>
+							<width>526</width>
+							<height>53</height>
+							<align>left</align>
+							<font>Font_Reg40</font>
+							<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label] as[CR]$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group" id="816">
+				<visible>Skin.HasSetting(KodiFlixTVInfo) + Skin.HasSetting(KodiFlixTVInfoSwitchArt) + Skin.HasSetting(KodiFlixTVInfoShowCast) + !ListItem.IsParentFolder</visible>
+				<control type="wraplist" id="1000">
+					<content>$VAR[KodilixTVInfoCast]</content>
+					<left>1320</left>
+					<top>475</top>
+					<width>872</width>
+					<height>220</height>
+					<onleft>1000</onleft>
+					<onright>1000</onright>
+					<onup>8050</onup>
+					<ondown>8050</ondown>
+					<orientation>horizontal</orientation>
+					<scrolltime>400</scrolltime>
+					<autoscroll delay="8000" time="6000" repeat="10000">true</autoscroll>
+					<itemlayout height="85" width="87.2">
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<include>Animation_VisibleChange400</include>
+							<colordiffuse>FF909090</colordiffuse>
+						</control>
+					</itemlayout>
+					<focusedlayout height="110" width="90">
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>90</width>
+							<height>110</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">black.png</bordertexture>
+							<colordiffuse>FF909090</colordiffuse>
+							<include>Animation_VisibleChange400</include>
+							<visible>!Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>5</top>
+							<width>65</width>
+							<height>90</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="DefaultActor.png" background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="-2">grey.png</bordertexture>
+							<include>Animation_VisibleChange400</include>
+							<visible>Control.HasFocus(1000)</visible>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>5</top>
+							<width>526</width>
+							<height>104</height>
+							<texture>black.png</texture>
+						</control>
+						<control type="label">
+							<left>120</left>
+							<top>20</top>
+							<width>526</width>
+							<height>53</height>
+							<align>left</align>
+							<font>Font_Reg40</font>
+							<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scroll>true</scroll>
+							<label>$INFO[ListItem.Label] as[CR]$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
 			<!-- Media Flags -->
 			<control type="group">
 				<left>300</left>
@@ -1807,6 +2228,8 @@
 				<width>1840</width>
 				<height>90</height>
 				<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
+				<animation effect="slide" start="0,0" end="-300,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVInfo) + !Container.Content(episodes)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="300,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVInfo) + Container.Content(episodes)">Conditional</animation>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
@@ -1871,7 +2294,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<include>MediaFlagVars</include>
 					<texture>$VAR[StudioImageVar]</texture>
-					<visible>!String.IsEmpty(ListItem.Studio)	+ !Container.Content(tvshows) + !Container.Content(seasons) + !ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.Studio) + !Container.Content(tvshows) + !Container.Content(seasons) + !ListItem.IsParentFolder</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
@@ -1938,7 +2361,7 @@
 						<colordiffuse>floor</colordiffuse>
 						<include>MediaFlagVars</include>
 						<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-						<visible>!String.IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
+						<visible>!String.IsEmpty(ListItem.Title) + [!Container.Content(seasons) | Skin.HasSetting(KodiFlixTVInfo)]</visible>
 					</control>
 					<control type="image" id="1200">
 						<left>800</left>
@@ -1946,7 +2369,7 @@
 						<colordiffuse>floor</colordiffuse>
 						<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 						<include>AudioFlagsVars</include>
-						<visible>!Container.Content(seasons)</visible>
+						<visible>[!Container.Content(seasons) | Skin.HasSetting(KodiFlixTVInfo)]</visible>
 					</control>
 					<control type="image">
 						<left>800</left>
@@ -2093,7 +2516,7 @@
 				<visible>Control.IsVisible(820)</visible>
 			</control>
 
-		<!-- Letter-Scrollbar -->
+			<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>420</left>
 				<top>923</top>
