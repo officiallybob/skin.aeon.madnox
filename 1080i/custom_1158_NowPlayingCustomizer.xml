@@ -268,7 +268,34 @@
 					<onclick condition="Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel)">Skin.Reset(nowplayingpanel)</onclick>
 					<enable>!Skin.HasSetting(nohomepageMusicinfo)</enable>
 				</control>
-				
+				<control type="radiobutton" id="455">
+					<label>31729</label>
+					<include>Objects_NowPlayingSettingsButton</include>
+					<onclick>Skin.ToggleSetting(movenowplayingwidget)</onclick>
+					<selected>Skin.HasSetting(movenowplayingwidget)</selected>
+					<enable>!Skin.HasSetting(nohomepageMusicinfo)</enable>
+				</control>
+				<control type="radiobutton" id="4566"><!-- ID? -->
+					<label>$LOCALIZE[31560]</label>
+					<include>Objects_NowPlayingSettingsButton</include>
+					<onclick>Skin.ToggleSetting(NowPlayingBelowBar)</onclick>
+					<onclick>Skin.Reset(nohomepageMusicinfo)</onclick><!-- dont work...-->
+					<selected>Skin.HasSetting(NowPlayingBelowBar)</selected>
+				</control>
+				<control type="radiobutton" id="4567"><!-- ID? -->
+					<label>$LOCALIZE[31561]</label>
+					<include>Objects_NowPlayingSettingsButton</include>
+					<onclick>Skin.ToggleSetting(BelowMidCD)</onclick>
+					<selected>Skin.HasSetting(BelowMidCD)</selected>
+					<enable>Skin.HasSetting(NowPlayingBelowBar)</enable>
+				</control>
+				<control type="radiobutton" id="4568"><!-- ID? -->
+					<label>$LOCALIZE[31562]</label>
+					<include>Objects_NowPlayingSettingsButton</include>
+					<onclick>Skin.ToggleSetting(BelowMidLogo)</onclick>
+					<selected>Skin.HasSetting(BelowMidLogo)</selected>
+					<enable>Skin.HasSetting(NowPlayingBelowBar)</enable>
+				</control>
 			</control>
 		</control>
 	</controls>

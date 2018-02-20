@@ -43,7 +43,7 @@
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,a,Left) | SubString(ListItem.Title,b,Left) | SubString(ListItem.Title,c,Left) | SubString(ListItem.Title,d,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,a) | String.StartsWith(ListItem.Title,b) | String.StartsWith(ListItem.Title,c) | String.StartsWith(ListItem.Title,d)</visible>
 			</control>
 			<control type="textbox">
 				<posx>0</posx>
@@ -57,7 +57,7 @@
 				<font>font_armyofdarkness</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,e,Left) | SubString(ListItem.Title,f,Left) | SubString(ListItem.Title,g,Left) | SubString(ListItem.Title,h,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,e) | String.StartsWith(ListItem.Title,f) | String.StartsWith(ListItem.Title,g) | String.StartsWith(ListItem.Title,h)</visible>
 			</control>
 			<control type="textbox">
 				<posx>0</posx>
@@ -71,7 +71,7 @@
 				<font>font_babylon5</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,i,Left) | SubString(ListItem.Title,j,Left) | SubString(ListItem.Title,k,Left) | SubString(ListItem.Title,l,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,i) | String.StartsWith(ListItem.Title,j) | String.StartsWith(ListItem.Title,k) | String.StartsWith(ListItem.Title,l)</visible>
 			</control>
 			<control type="textbox">
 				<posx>0</posx>
@@ -85,7 +85,7 @@
 				<font>font_bachelorpad</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,m,Left) | SubString(ListItem.Title,n,Left) | SubString(ListItem.Title,o,Left) | SubString(ListItem.Title,p,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,m) | String.StartsWith(ListItem.Title,n) | String.StartsWith(ListItem.Title,o) | String.StartsWith(ListItem.Title,p)</visible>
 			</control>
 			<control type="textbox">
 				<posx>0</posx>
@@ -99,7 +99,7 @@
 				<font>font_bullpen3d</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,q,Left) | SubString(ListItem.Title,r,Left) | SubString(ListItem.Title,s,Left) | SubString(ListItem.Title,t,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,q) | String.StartsWith(ListItem.Title,r) | String.StartsWith(ListItem.Title,s) | String.Contains(ListItem.Title,t)</visible>
 			</control>
 			<control type="textbox">
 				<posx>0</posx>
@@ -113,7 +113,7 @@
 				<font>font_terminator</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>SubString(ListItem.Title,u,Left) | SubString(ListItem.Title,v,Left) | SubString(ListItem.Title,w,Left) | SubString(ListItem.Title,x,Left) | SubString(ListItem.Title,y,Left) | SubString(ListItem.Title,z,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,u) | String.StartsWith(ListItem.Title,v) | String.StartsWith(ListItem.Title,w) | String.StartsWith(ListItem.Title,x) | String.StartsWith(ListItem.Title,y) | String.StartsWith(ListItem.Title,z)</visible>
 			</control>
 			<!--MAD - End of Fake Logo -->
 			<control type="group">
